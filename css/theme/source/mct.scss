@@ -1,0 +1,332 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto+Mono&display=swap');
+@import url("https://use.typekit.net/kdm8rfu.css");
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Inter', sans-serif;
+$mainFontSize: 30px;
+$mainColor: #fff;
+$blockMargin: 1.5rem;
+// $headingFont: 'proxima-soft', sans-serif;
+$headingFont: flood-std, sans-serif;
+// $headingFont: subway-paris-sc, sans-serif;
+// $headingFontWeight: 700;
+$headingFontWeight: normal;
+$headingMargin: 0 0 3rem;
+$headingColor: #fff;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$codefont: 'Roboto Mono', monospace;
+$backgroundColor: #000;
+$linkColor: #44C8F5;
+$linkColorHover: #ec008c;
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$heading1Size: 1.953em;
+$heading2Size: 1.563em;
+$heading3Size: 1.25em;
+$heading4Size: 1.0em;
+
+.reveal {
+    // h1,
+    // h2,
+    // h3,
+    // h4 {
+    //     text-align: left;
+    // }
+
+    font-feature-settings: "liga", "ss02";
+
+    .progress {
+        height: 5px;
+    }
+}
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.o-layout {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.o-layout__item {
+    padding: 0 $blockMargin;
+    flex-grow: 1;
+}
+
+.c-neon-text {    
+    position: relative;
+    display: inline-block;    
+    text-shadow: 
+            0 0 1px $linkColor, 
+            0 0 5px $linkColor, 
+            0 0 10px $linkColor, 
+            0 0 20px $linkColor !important;
+
+    // &::before {
+    //     content: attr(data-text);
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     animation: neon 2s ease-in-out infinite alternate;
+    // }
+
+    // &::before {       
+    //     color: $linkColor;
+    //     z-index: -1;
+    //     text-shadow: 
+    //         0 0 1px $linkColor, 
+    //         0 0 5px $linkColor, 
+    //         0 0 10px $linkColor !important;
+    // }
+}
+
+@keyframes neon {
+    0% {opacity: .8;}
+    5% {opacity: .9;}
+    10% {opacity: 1;}
+    15% {opacity: .7;}
+    20% {opacity: .8;}
+    25% {opacity: .7;}
+    30% {opacity: 1;}
+    35% {opacity: .7;}
+    40% {opacity: .8;}
+    45% {opacity: .8;}
+    50% {opacity: .7;}
+    55% {opacity: .9;}
+    60% {opacity: .9;}
+    65% {opacity: .9;}
+    70% {opacity: .7;}
+    75% {opacity: .7;}
+    80% {opacity: 1;}
+    85% {opacity: .8;}
+    90% {opacity: .9;}
+    95% {opacity: .7;}
+    100% {opacity: 1;}
+}
+
+.c-stash {
+    font-family: $codefont;
+    // opacity: .5;
+    color: #ec008c;
+}
+
+.c-quote {
+
+    &:before,
+    &:after {
+        font-family: $headingFont;
+        // opacity: .5;
+        display: inline-block;
+        position: relative;
+        transform: scale(5);
+        line-height: 1;
+        color: $linkColor;
+        z-index: -1;
+    }
+
+    &:before {
+        content: "\201C";
+        top: 0.5em;
+        left: -.25em;
+    }
+    
+    &:after {
+        content: "\201D";
+        top: 1.5em;
+        left: -.5em;
+    }
+}
+
+.c-avatar {
+    // border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    img {
+        // opacity: 0.5;
+        mix-blend-mode: color-burn;
+        // mix-blend-mode: luminosity;
+        // mix-blend-mode: overlay;
+        // mix-blend-mode: multiply;
+        margin: 0;
+        filter: grayscale(100%) contrast(200%);
+        // margin:3px 3px 3px 3px;
+        // border-radius: 100%;
+        border-radius: 45% 55% 40% 60% / 55% 40% 60% 45% ;
+    }
+}
+
+.c-avatar__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $linkColor;
+    // background-color: adjust-hue($linkColor,-20deg);
+    // background-image: linear-gradient(to bottom right, $linkColor, $linkColorHover);
+    background-image: linear-gradient(to bottom left, $linkColor, adjust-hue($linkColor,-20deg));
+    border-radius: 100%;
+    // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-radius: 45% 55% 40% 60% / 55% 40% 60% 45% ;
+    overflow: hidden;
+}
+
+.u-slanted {
+    transform: rotate(-3deg) skew(-3deg, 0deg);
+    // transform-origin: 50% 50%;
+    // transform: rotate(-3deg);
+}
+
+.c-awesome-hand {
+    display: inline-block !important;
+    animation: shake-chunk 2s infinite;
+}
+
+.c-awesome-hand--right {
+    animation-delay: 1s;
+}
+
+@keyframes shake-chunk{ 
+    5%{transform:translate(-9px, 15px) rotate(5deg)}
+    10%{transform:translate(5px, 15px) rotate(7deg)}
+    15%{transform:translate(4px, 12px) rotate(3deg)}
+    20%{transform:translate(-11px, 3px) rotate(5deg)}
+    25%{transform:translate(-5px, -11px) rotate(-1deg)}
+    30%{transform:translate(12px, 14px) rotate(1deg)}
+    35%{transform:translate(12px, 8px) rotate(-11deg)}
+    40%{transform:translate(9px, 14px) rotate(-1deg)}
+    45%{transform:translate(-14px, 5px) rotate(-14deg)}
+    50%{transform:translate(-3px, 9px) rotate(-14deg)}
+    55%{transform:translate(-4px, 11px) rotate(-14deg)}
+    60%{transform:translate(13px, -7px) rotate(-13deg)}
+    65%{transform:translate(8px, 13px) rotate(-3deg)}
+    70%{transform:translate(6px, 0px) rotate(9deg)}
+    75%{transform:translate(0px, 5px) rotate(14deg)}
+    80%{transform:translate(12px, 4px) rotate(-12deg)}
+    85%{transform:translate(6px, -6px) rotate(4deg)}
+    90%{transform:translate(6px, 7px) rotate(-3deg)}
+    95%{transform:translate(9px, 0px) rotate(-1deg)}
+}
+
+
+.u-muted {
+    opacity: 0.5;
+}
+
+.u-mw-xxxs {
+    max-width: 6rem !important;
+}
+
+.u-mw-xxs {
+    max-width: 11rem !important;
+}
+
+.u-mw-xs {
+    max-width: 16rem !important;
+}
+
+.u-rounded {
+    // border-radius: 100%;
+    // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-radius: 45% 55% 40% 60% / 55% 40% 60% 45% ;
+}
+
+.u-m-clear {
+    margin: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-ms-xxxxs {
+    font-size: 0.335em !important;
+}
+
+.u-ms-xxxs {
+    font-size: 0.482em !important;
+}
+
+.u-ms-xxs {
+    font-size: 0.579em !important;
+}
+
+.u-ms-xs {
+    font-size: 0.694em !important;
+}
+
+.u-ms-sm {
+    font-size: 0.833em !important;
+}
+
+.u-mb-xxs {
+    margin-bottom: .25rem !important;
+}
+
+.u-mb-xs {
+    margin-bottom: .5rem !important;
+}
+
+.u-mb-sm {
+    margin-bottom: .75rem !important;
+}
+
+.u-mb-md {
+    margin-bottom: 1rem !important;
+}
+
+.u-mb-default {
+    margin-bottom: $blockMargin !important;
+}
+
+.u-mb-lg {
+    margin-bottom: $blockMargin * 1.25 !important;
+}
+
+.u-mb-xl {
+    margin-bottom: $blockMargin * 1.5 !important;
+}
+
+.u-mb-xxl {
+    margin-bottom: $blockMargin * 1.75 !important;
+}
+
+.u-mb-xxxl {
+    margin-bottom: $blockMargin * 2 !important;
+}
+
+.u-text-left {
+    text-align: left !important;
+}
+
+html.print-pdf {
+    .c-avatar__image {
+        display: inline-block;
+    }
+}
