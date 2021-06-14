@@ -1,0 +1,55 @@
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 307.19 350.7">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 22.93;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        stroke: #50b848;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="171.74" y1="94.53" x2="171.74" y2="365.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0.07" stop-color="#50b848"/>
+      <stop offset="0.1" stop-color="#74c339"/>
+      <stop offset="0.13" stop-color="#afd521"/>
+      <stop offset="0.17" stop-color="#dbe30f"/>
+      <stop offset="0.19" stop-color="#f5eb04"/>
+      <stop offset="0.21" stop-color="#fe0"/>
+      <stop offset="0.29" stop-color="#fed908"/>
+      <stop offset="0.42" stop-color="#fbaa19"/>
+      <stop offset="0.43" stop-color="#fa9e1a"/>
+      <stop offset="0.44" stop-color="#f67c1d"/>
+      <stop offset="0.46" stop-color="#f35e1f"/>
+      <stop offset="0.48" stop-color="#f14621"/>
+      <stop offset="0.5" stop-color="#ef3322"/>
+      <stop offset="0.53" stop-color="#ee2623"/>
+      <stop offset="0.56" stop-color="#ed1e24"/>
+      <stop offset="0.63" stop-color="#ed1c24"/>
+      <stop offset="0.65" stop-color="#df1c41"/>
+      <stop offset="0.67" stop-color="#d21b5c"/>
+      <stop offset="0.7" stop-color="#c81b72"/>
+      <stop offset="0.73" stop-color="#c11b81"/>
+      <stop offset="0.76" stop-color="#bc1b8a"/>
+      <stop offset="0.81" stop-color="#bb1b8d"/>
+      <stop offset="0.82" stop-color="#b31f8f"/>
+      <stop offset="0.84" stop-color="#9d2a96"/>
+      <stop offset="0.86" stop-color="#783da0"/>
+      <stop offset="0.89" stop-color="#4557ae"/>
+      <stop offset="0.92" stop-color="#0577c0"/>
+      <stop offset="0.93" stop-color="#007ac2"/>
+    </linearGradient>
+  </defs>
+  <title>apple_30th</title>
+  <g>
+    <path class="cls-1" d="M111.44,363.73C19.75,336.08-42.45,98.34,121.57,96c22.12-.23,36.4,11.74,53.45,15,12.67,2.3,26.27-14.05,69.8-14.05,27.88,0,52.53,13.13,69.35,33.86-55.06,35.71-57.36,105.05,9.44,139.38-6.45,27.64-45.15,79.48-65.43,89.61-24.87,12.44-55.51-9.44-79.93-10.36-21.89-.7-43.77,16.35-66.81,14.28Z" transform="translate(-18.15 -14.71)"/>
+    <path class="cls-2" d="M170.11,100c46.07,2.31,76.48-48.61,71.87-83.62C213.19,18.86,167.34,47.43,170.11,100Z" transform="translate(-18.15 -14.71)"/>
+  </g>
+</svg>
